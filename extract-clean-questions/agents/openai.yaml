@@ -1,0 +1,6 @@
+interface:
+  display_name: "净题提取"
+  short_description: "提取文档中的干净题目与配图，按章生成 MD、LaTeX 和 PDF"
+  default_prompt: "使用 $extract-clean-questions 提取上传文档中的题目和配图，清除答案及作答痕迹，按章节生成 Markdown、LaTeX 和 A4 PDF。"
+policy:
+  allow_implicit_invocation: true
