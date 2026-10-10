@@ -1,0 +1,30 @@
+% Compile with XeLaTeX. Replace example content and adapt fonts for the source language.
+\documentclass[UTF8,a4paper,11pt,fontset=fandol]{ctexart}
+\usepackage[margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,graphicx,array,longtable}
+\usepackage{enumitem,needspace,fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\setlist[enumerate,1]{label=\arabic*.,leftmargin=*,itemsep=1em}
+\setlist[enumerate,2]{label=(\arabic*),leftmargin=*}
+\newcommand{\QuestionStart}{\Needspace{4\baselineskip}}
+% A fixed, indivisible 45 mm blank block. Inspect pagination with the preceding question.
+\newcommand{\AnswerSpace}{\par\nointerlineskip\vbox to 45mm{\vfil}\par}
+\newcommand{\QuestionImage}[2][0.8\linewidth]{%
+  \par\begingroup\centering\includegraphics[width=#1]{#2}\par\endgroup}
+\begin{document}
+\setcounter{page}{1}
+\section*{章节名称}
+\begin{enumerate}
+\QuestionStart\item 选择题示例：下列哪个数等于 $1+1$？
+\par A. 1\qquad B. 2\qquad C. 3\qquad D. 4
+% No AnswerSpace for multiple-choice or true/false questions.
+\QuestionStart\item 计算题示例：计算 $\displaystyle\int_0^1 x^2\,\mathrm{d}x$。
+\AnswerSpace
+\end{enumerate}
+\end{document}
